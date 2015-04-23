@@ -11,10 +11,10 @@ pid_of_spring_boot() {
     pgrep -f "java.*$PROJECT_NAME"
 }
 
-echo -n "Stopping $PROJECT_NAME: "
+echo "Stopping $PROJECT_NAME..."
 
 pid=`pid_of_spring_boot`
-[ -n "$pid" ] && kill $pid
+[ -n "$pid" ] && sudo kill $pid
 RETVAL=$?
 cnt=10
 while [ $RETVAL = 0 -a $cnt -gt 0 ] &&
@@ -23,6 +23,4 @@ while [ $RETVAL = 0 -a $cnt -gt 0 ] &&
 		((cnt--))
 done
 
-[ $RETVAL = 0 ] && rm -f "$LOCK"
-[ $RETVAL = 0 ] && success $"$STRING" || failure $"$STRING"
 echo
