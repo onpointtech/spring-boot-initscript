@@ -1,12 +1,11 @@
-Spring Boot init.d script
+Spring Boot start/stop scripts
 =========================
 
-This script is meant to run a spring-boot project as a linux service using initd. 
-It is meant as a template that can be reconfigured to an arbitrary war file. 
+These scripts are meant to start/stop a spring-boot project on a linux system.
 
-Use the variable names at the top of the script to customize to your specific project.
+It is meant as a template that can be reconfigured to an arbitrary jar file. 
 
-This file is known to work with CentOS, however, will not work yet for Ubuntu (due to the differences in `/etc/init.d/functions`).
+Use the variable names in the settings.sh file to customize to your specific project.
 
 Parameter | Description | Default Value
 ----------| ----------- | ----------
