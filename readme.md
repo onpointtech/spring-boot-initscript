@@ -13,5 +13,5 @@ Parameter | Description | Default Value
 `PROJECT_NAME` | the name of the project, will also be used for the war file, log file, ... | `springboot`
 `SERVICE_USER` | the user which should run the service | `root`
 `SPRINGBOOTAPP_HOME` | base directory for the spring boot jar |  `/usr/local/$PROJECT_NAME`
-`SPRINGBOOTAPP_WAR` | the jar/war file to start via `java -jar` | `$SPRINGBOOTAPP_HOME/$PROJECT_NAME.war`
+`SPRINGBOOTAPP_JAR` | the jar/war file to start via `java -jar` | `$SPRINGBOOTAPP_HOME/$PROJECT_NAME.jar`
 `SPRINGBOOTAPP_JAVA` | java executable for spring boot app, change if you have multiple jdks installed | `$JAVA_HOME/bin/java`
