@@ -5,7 +5,8 @@
 # chkconfig: - 84 16
 # description: spring boot project
 
-source settings.sh
+work_dir=$( cd "$( dirname $0 )" && pwd )
+. $work_dir/settings.sh
 
 pid_of_spring_boot() {
     pgrep -f "java.*$PROJECT_NAME"
